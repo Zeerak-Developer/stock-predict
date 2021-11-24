@@ -1,9 +1,8 @@
-from flask import Flask,request,jsonify
+from flask import Flask,jsonify
 import pickle
 import numpy as np
 
-pkl_file = open('model1.pkl','rb')
-pkl1_file = open('model2.pkl','rb')
+
 
 app = Flask(__name__)
 
@@ -13,6 +12,7 @@ def home():
 
 @app.route('/predict',methods=['GET'])
 def predict():
+    pkl_file=open('model1.pkl', 'rb')
     mydict2 = pickle.load(pkl_file)
     pkl_file.close( )
 
@@ -20,6 +20,7 @@ def predict():
 
 @app.route('/predict1',methods=['GET'])
 def predict1():
+    pkl1_file=open('model2.pkl', 'rb')
     mydict3=pickle.load(pkl1_file)
     pkl1_file.close( )
 
