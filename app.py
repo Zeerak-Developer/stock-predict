@@ -2,8 +2,6 @@ from flask import Flask,jsonify
 import pickle
 import numpy as np
 
-
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -24,7 +22,7 @@ def predict1():
     mydict3=pickle.load(pkl1_file)
     pkl1_file.close( )
 
-    return jsonify(mydict3)
+    return jsonify({"Result1": mydict3})
 
 if __name__ == '__main__':
     app.run(debug=True)
