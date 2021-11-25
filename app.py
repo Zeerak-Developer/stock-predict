@@ -16,7 +16,7 @@ def predict():
     mydict2 = pickle.load(pkl_file)
     pkl_file.close( )
 
-    return jsonify(mydict2)
+    return jsonify({"Result": mydict2})
 
 @app.route('/predict1',methods=['GET'])
 def predict1():
