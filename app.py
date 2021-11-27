@@ -24,6 +24,38 @@ def predict1():
 
     return jsonify({"Result1": mydict1})
 
+@app.route('/predict2',methods=['GET'])
+def predict2():
+    pkl2_file=open('model2.pkl', 'rb')
+    mydict2=pickle.load(pkl2_file)
+    pkl2_file.close( )
+
+    return jsonify({"Result2": mydict2})
+
+@app.route('/predict3',methods=['GET'])
+def predict3():
+    pkl3_file=open('model3.pkl', 'rb')
+    mydict3=pickle.load(pkl3_file)
+    pkl3_file.close( )
+
+    return jsonify({"Result3": mydict3})
+
+@app.route('/predict4',methods=['GET'])
+def predict4():
+    pkl4_file=open('model4.pkl', 'rb')
+    mydict4=pickle.load(pkl4_file)
+    pkl4_file.close( )
+
+    return jsonify({"Result4": mydict4})
+
+@app.route('/predict5',methods=['GET'])
+def predict5():
+    pkl5_file=open('model5.pkl', 'rb')
+    mydict5=pickle.load(pkl5_file)
+    pkl5_file.close( )
+
+    return jsonify({"Result5": mydict5})
+
 if __name__ == '__main__':
     app.run(debug=True)
 
