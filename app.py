@@ -536,13 +536,13 @@ def predict43():
 
     return jsonify({"Result43": mydict43})
 
-@app.route('/predict83',methods=['GET'])
-def predict83():
-    pkl83_file=open('gphRoku.pkl', 'rb')
-    mydict83=pickle.load(pkl83_file)
-    pkl83_file.close( )
+#@app.route('/predict83',methods=['GET'])
+#def predict83():
+ #   pkl83_file=open('gphRoku.pkl', 'rb')
+  #  mydict83=pickle.load(pkl83_file)
+   # pkl83_file.close( )
 
-    return jsonify({"Result83": mydict83})
+    #return jsonify({"Result83": mydict83})
 
 @app.route('/predict44',methods=['GET'])
 def predict44():
